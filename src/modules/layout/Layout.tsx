@@ -57,9 +57,7 @@ export const Layout = (p: { children: React.ReactNode }) => {
                       <Bars3Icon />
                     </OpenDrawerWrapper>
                   </div>
-                  <Link href="/" className="p-0 text-3xl hover:underline">
-                    next-daisyui-fire-starter
-                  </Link>
+                  <Link href="/" className="p-0 text-3xl hover:underline"></Link>
                 </div>
               }
               rightChildren={

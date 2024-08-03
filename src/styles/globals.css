@@ -38,3 +38,7 @@ input[type=number] {
     text-wrap: balance;
   }
 }
+
+.custom-bullet::marker {
+  color: oklch(var(--nc)); /* Red color using Tailwind red-400 */
+}
