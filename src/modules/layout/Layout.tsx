@@ -1,8 +1,6 @@
 import Link from "next/link";
 import { NavBar, NavBarDropdown } from "./NavBar";
 import { useAuthStore } from "@/stores/useAuthStore";
-import { logoutFirebaseUser } from "@/utils/firebaseAuthUtils";
-import { auth } from "@/config/firebaseConfig";
 import { ThemeSelector } from "../themeSelector";
 import { Bars3Icon } from "@heroicons/react/24/outline";
 
@@ -81,15 +79,6 @@ export const Layout = (p: { children: React.ReactNode }) => {
                         <ThemeSelector />
                       </div>
                     </NavBarDropdown>
-                    {safeAuthStore.status === "logged_in" && (
-                      <Link
-                        className="link no-underline hover:underline"
-                        href="/"
-                        onClick={() => logoutFirebaseUser({ auth: auth })}
-                      >
-                        Log Out
-                      </Link>
-                    )}
                   </div>
                 </>
               }
