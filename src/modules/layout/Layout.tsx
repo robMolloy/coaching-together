@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { NavBar, NavBarDropdown } from "./NavBar";
-import { useAuthStore } from "@/stores/useAuthStore";
 import { ThemeSelector } from "../themeSelector";
 import { Bars3Icon } from "@heroicons/react/24/outline";
 
@@ -44,8 +43,6 @@ const ContainerWithSpotlightBackgroundTop = () => {
 };
 
 export const Layout = (p: { children: React.ReactNode }) => {
-  const authStore = useAuthStore();
-  const safeAuthStore = authStore.getSafeStore();
   return (
     <>
       <div className="drawer">
@@ -83,19 +80,17 @@ export const Layout = (p: { children: React.ReactNode }) => {
                 </>
               }
               bottomChildren={
-                safeAuthStore.status === "logged_in" && (
-                  <div className="breadcrumbs pl-4 text-sm">
-                    <ul>
-                      <li>
-                        <a>Home</a>
-                      </li>
-                      <li>
-                        <a>Documents</a>
-                      </li>
-                      <li>Add Document</li>
-                    </ul>
-                  </div>
-                )
+                <div className="breadcrumbs pl-4 text-sm">
+                  <ul>
+                    <li>
+                      <a>Home</a>
+                    </li>
+                    <li>
+                      <a>Documents</a>
+                    </li>
+                    <li>Add Document</li>
+                  </ul>
+                </div>
               }
             />
           </NavBarContainer>
