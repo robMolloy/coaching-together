@@ -79,19 +79,6 @@ export const Layout = (p: { children: React.ReactNode }) => {
                   </div>
                 </>
               }
-              bottomChildren={
-                <div className="breadcrumbs pl-4 text-sm">
-                  <ul>
-                    <li>
-                      <a>Home</a>
-                    </li>
-                    <li>
-                      <a>Documents</a>
-                    </li>
-                    <li>Add Document</li>
-                  </ul>
-                </div>
-              }
             />
           </NavBarContainer>
           {p.children}
