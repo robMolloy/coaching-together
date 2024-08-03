@@ -1,4 +1,5 @@
 import { Typography } from "@/components";
+import { ContactForm } from "@/components/ContactForm";
 import { DaisyHero } from "@/components/DaisyHero";
 
 const Parent = () => {
@@ -218,6 +219,7 @@ const Parent = () => {
             </div>
           </div>
         </div>
+        <ContactForm />
       </Typography>
     </main>
   );
