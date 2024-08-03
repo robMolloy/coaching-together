@@ -39,6 +39,6 @@ input[type=number] {
   }
 }
 
-.custom-bullet::marker {
+.list-disc>li::marker {
   color: oklch(var(--nc)); /* Red color using Tailwind red-400 */
 }

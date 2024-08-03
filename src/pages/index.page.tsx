@@ -76,26 +76,28 @@ const Parent = () => {
               <div>Contact to me here to talk about your challenges.</div>
             </div>
           </div>
-          <ul className="list-disc rounded-box bg-neutral text-neutral-content">
-            <li>leading your team</li>
-            <li>managing specific issues within your team</li>
-            <li>developing your team to be more effective</li>
-            <li>managing home/remote workers</li>
-            <li>holding difficult conversations/managing conflict</li>
-            <li>managing your toxic boss</li>
-            <li>building trust</li>
-            <li>developing confidence</li>
-            <li>becoming more assertive</li>
-            <li>building resilience</li>
-            <li>overcoming 'imposter syndrome'</li>
-            <li>explore feedback in a safe environment</li>
-            <li>
-              developing specific skills such as time management, decision making, interview skills,
-              presentation skills
-            </li>
-            <li>identifying Best Self and Shadow Behaviours (see PRINT® section)</li>
-            <li>changing/developing your career</li>
-          </ul>
+          <div className="rounded-box bg-neutral p-4 py-0 text-neutral-content">
+            <ul className="list-disc">
+              <li>leading your team</li>
+              <li>managing specific issues within your team</li>
+              <li>developing your team to be more effective</li>
+              <li>managing home/remote workers</li>
+              <li>holding difficult conversations/managing conflict</li>
+              <li>managing your toxic boss</li>
+              <li>building trust</li>
+              <li>developing confidence</li>
+              <li>becoming more assertive</li>
+              <li>building resilience</li>
+              <li>overcoming 'imposter syndrome'</li>
+              <li>explore feedback in a safe environment</li>
+              <li>
+                developing specific skills such as time management, decision making, interview
+                skills, presentation skills
+              </li>
+              <li>identifying Best Self and Shadow Behaviours (see PRINT® section)</li>
+              <li>changing/developing your career</li>
+            </ul>
+          </div>
         </div>
         <br />
         <br />
@@ -129,29 +131,17 @@ const Parent = () => {
         <div className="text-center">Click here to talk to me about achieving your potential</div>
         <br />
         <br />
-        <div className="bg-neutral">
+        <div className="rounded-box bg-neutral p-4 pb-2">
           <h2 className="mt-0 text-center text-neutral-content">
             Qualifications and professional membership
           </h2>
 
-          <ul className="custom-bullet list-disc rounded-box text-neutral-content">
-            <li className="custom-bullet list-disc rounded-box text-neutral-content">
-              Post-graduate level certificate in Performance Development Coaching
-            </li>
-
-            <li className="custom-bullet list-disc rounded-box text-neutral-content">
-              MSc in Management
-            </li>
-
-            <li className="custom-bullet list-disc rounded-box text-neutral-content">
-              PRINT® and DiSC accredited
-            </li>
-
-            <li className="custom-bullet list-disc rounded-box text-neutral-content">
-              Trained NLP practitioner, I use NLP techniques in coaching where appropriate
-            </li>
-
-            <li className="custom-bullet list-disc rounded-box text-neutral-content">
+          <ul className="list-disc rounded-box text-neutral-content">
+            <li>Post-graduate level certificate in Performance Development Coaching</li>
+            <li>MSc in Management</li>
+            <li>PRINT® and DiSC accredited</li>
+            <li>Trained NLP practitioner, I use NLP techniques in coaching where appropriate</li>
+            <li>
               Member of the Association for Coaching, Coaching York and Associate Member of the
               CIPD.
             </li>
