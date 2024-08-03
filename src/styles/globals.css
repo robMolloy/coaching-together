@@ -39,6 +39,9 @@ input[type=number] {
   }
 }
 
+.list-disc.text-neutral-content>li::marker {
+  color: oklch(var(--nc));
+}
 .list-disc>li::marker {
-  color: oklch(var(--nc)); /* Red color using Tailwind red-400 */
+  color: oklch(var(--bc));
 }
