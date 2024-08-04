@@ -63,6 +63,9 @@ export const Layout = (p: { children: React.ReactNode }) => {
               rightChildren={
                 <>
                   <div className="flex w-full items-center justify-end gap-6">
+                    <Link href="/">Home</Link>
+                    <Link href="/tools">Tools</Link>
+                    <Link href="/contact">Contact</Link>
                     <NavBarDropdown
                       labelChildren={(p: { tabIndex: 0 }) => (
                         <div className="link no-underline hover:underline" tabIndex={p.tabIndex}>

@@ -116,7 +116,7 @@ const Parent = () => {
           <div>
             <h2 className="mt-0">My Experience</h2>
             <p>
-              With over 2 decades of people, organisational and management development experience, I
+              With over 2 decades of leadership, people and organisational development experience, I
               use a wide range of tools and techniques to support you in your behaviour change and
               development. I’ve coached people in various types and size of organisation, in the
               public and private sector, and at all levels up to Managing Director. I’ve recruited
@@ -139,13 +139,10 @@ const Parent = () => {
 
           <ul className="list-disc rounded-box text-neutral-content">
             <li>Post-graduate level certificate in Performance Development Coaching</li>
-            <li>MSc in Management</li>
+            <li>Leadership in Management</li>
             <li>PRINT® and DiSC accredited</li>
             <li>Trained NLP practitioner, I use NLP techniques in coaching where appropriate</li>
-            <li>
-              Member of the Association for Coaching, Coaching York and Associate Member of the
-              CIPD.
-            </li>
+            <li>Member of Coaching York and Associate Member of the CIPD.</li>
           </ul>
         </div>
         <br />

@@ -10,10 +10,20 @@ import { useNotifyStore } from "@/modules/notify";
 
 const schema = z.object({
   name: z.string(),
-  email: z.string(),
+  email: z.string().email(),
   phone: z.string(),
   message: z.string(),
 });
+
+const sendData = async (data: z.infer<typeof schema>): Promise<{ success: boolean }> => {
+  const response = await fetch("https://formspree.io/f/xeojgnzw", {
+    method: "POST",
+    body: JSON.stringify(data),
+    headers: { Accept: "application/json" },
+  });
+  const json = await response.json();
+  return { success: json.ok };
+};
 
 export const ContactForm = () => {
   const notifyStore = useNotifyStore();
@@ -37,6 +47,10 @@ export const ContactForm = () => {
         {
           validSchema: z.string().min(1),
           message: "Email is required",
+        },
+        {
+          validSchema: z.string().email(),
+          message: "This does not appear to be an email",
         },
       ],
       phone: [
@@ -70,18 +84,18 @@ export const ContactForm = () => {
 
     const checkFormDataResponse = checkFormDataAgainstRuleMap({ formData: formData, ruleMap });
     if (!checkFormDataResponse.success) {
-      notifyStore.push({ heading: "form submission unsuccessful" });
+      notifyStore.push({ heading: "form submission incomplete", type: "alert-error" });
 
       return overwriteFormDataErrorMessages(checkFormDataResponse.errors);
     }
 
     setIsLoading(true);
 
-    const sendResponse = await schema.safeParse("");
+    const sendResponse = await sendData(formData);
     if (sendResponse.success) {
+      notifyStore.push({ heading: "form submission successful", type: "alert-success" });
     } else {
-      // const errorMessage = sendResponse.error.message;
-      notifyStore.push({ heading: "form submission unsuccessful" });
+      notifyStore.push({ heading: "form submission unsuccessful", type: "alert-error" });
     }
     setIsLoading(false);
   };
