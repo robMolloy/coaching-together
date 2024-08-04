@@ -5,7 +5,7 @@ import {
   checkFormDataValue,
   createRuleMap,
 } from "@/modules/checkFormData";
-import { TextInput } from "@/components";
+import { TextBox, TextInput } from "@/components";
 import { useNotifyStore } from "@/modules/notify";
 
 const schema = z.object({
@@ -92,11 +92,10 @@ export const ContactForm = () => {
     setIsLoading(true);
 
     const sendResponse = await sendData(formData);
-    if (sendResponse.success) {
-      notifyStore.push({ heading: "form submission successful", type: "alert-success" });
-    } else {
-      notifyStore.push({ heading: "form submission unsuccessful", type: "alert-error" });
-    }
+    notifyStore.push({
+      type: sendResponse.success ? "alert-success" : "alert-error",
+      heading: sendResponse.success ? "form submission successful" : "form submission unsuccessful",
+    });
     setIsLoading(false);
   };
 
@@ -107,7 +106,7 @@ export const ContactForm = () => {
         showError={!!formDataErrorMessages.name}
         errorMessage={formDataErrorMessages.name}
         value={formData.name}
-        label="Type your name"
+        label="Name"
         placeholder="name"
         onInput={(value) => {
           const checkResponse = checkFormDataValue({ ruleMap, key: "name", value });
@@ -119,7 +118,7 @@ export const ContactForm = () => {
         showError={!!formDataErrorMessages.email}
         errorMessage={formDataErrorMessages.email}
         value={formData.email}
-        label="Type your email"
+        label="Email"
         placeholder="email"
         onInput={(value) => {
           const checkResponse = checkFormDataValue({ ruleMap, key: "email", value });
@@ -131,7 +130,7 @@ export const ContactForm = () => {
         showError={!!formDataErrorMessages.phone}
         errorMessage={formDataErrorMessages.phone}
         value={formData.phone}
-        label="Type your phone number"
+        label="Phone number"
         placeholder="phone number"
         onInput={(value) => {
           const checkResponse = checkFormDataValue({ ruleMap, key: "phone", value });
@@ -139,11 +138,11 @@ export const ContactForm = () => {
           setFormData({ ...formData, phone: value });
         }}
       />
-      <TextInput
+      <TextBox
         showError={!!formDataErrorMessages.message}
         errorMessage={formDataErrorMessages.message}
         value={formData.message}
-        label="Type your message"
+        label="Message"
         placeholder="message"
         onInput={(value) => {
           const checkResponse = checkFormDataValue({ ruleMap, key: "message", value });
