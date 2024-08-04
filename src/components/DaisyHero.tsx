@@ -13,7 +13,7 @@ export const DaisyHero = (p: {
       }}
     >
       <div className="hero-overlay bg-opacity-40"></div>
-      <div className="hero-content text-center text-neutral-content">
+      <div className="hero-content text-center text-white">
         <div className="max-w-xl">
           <h1 className="mb-5 text-5xl font-bold">{p.heading}</h1>
           <p className="mb-5 text-3xl font-bold">{p.children}</p>

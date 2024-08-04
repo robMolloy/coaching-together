@@ -1,5 +1,6 @@
 import { Typography } from "@/components";
 import { ContactForm } from "@/components/ContactForm";
+import { ContactFormLink } from "@/components/ContactFormLink";
 import { DaisyHero } from "@/components/DaisyHero";
 
 const Parent = () => {
@@ -22,17 +23,19 @@ const Parent = () => {
           <div>
             <h2 className="mt-0">Unlocking powerful insights</h2>
             <p>
-              Do you need help to achieve your potential? Do you have challenges you’d like to
+              Do you need help to achieve your potential? Do you have challenges you'd like to
               overcome?
             </p>
             <p>
               Working together in a safe and trusting environment, my aim is to enable you to build
               a new awareness of yourself to give you the best possible chance of achieving your
               potential. I will help you to understand your patterns of behaviour and thinking, to
-              see things from a new perspective, to enable you to step out of your comfort zone,
-              move forward and create change.
+              see things from a new perspective, to enable you to move forward and create change.
             </p>
-            <p>Contact me here to take your first step to creating change</p>
+            <p>
+              Contact me <ContactFormLink>here</ContactFormLink> to take your first step to creating
+              change
+            </p>
           </div>
         </div>
         <br />
@@ -44,14 +47,12 @@ const Parent = () => {
               I tailor my approach to you by taking into account your specific circumstances. My
               style is non-directive as this is most helpful in bringing about sustained change. At
               the core of my coaching is my belief that you have the resources you need; I will help
-              you to find them. Where appropriate, I’ll suggest tools to help you to overcome your
+              you to find them. Where appropriate, I'll suggest tools to help you to overcome your
               challenges. This approach will benefit you, your team and the business as a whole.
             </p>
             <p>
-              Click here to talk to me about taking the first step out of your comfort zone and
-              getting serious about change
+              Contact me <ContactFormLink>here</ContactFormLink> to talk about my style of coaching
             </p>
-            <p>Contact me here to talk about my style of coaching</p>
           </div>
           <div
             style={{
@@ -70,11 +71,13 @@ const Parent = () => {
             <div>
               <h2 className="mt-0">What I can help you with?</h2>
               <div>
-                I’m passionate about helping people to overcome challenges and achieve their
+                I'm passionate about helping people to overcome challenges and achieve their
                 potential. Nothing is too trivial or too difficult to have a conversation about.
                 Questions and challenges I can help you with include:
               </div>
-              <div>Contact to me here to talk about your challenges.</div>
+              <div>
+                Contact to me <ContactFormLink>here</ContactFormLink> to talk about your challenges.
+              </div>
             </div>
           </div>
           <div className="rounded-box bg-neutral p-4 py-0 text-neutral-content">
@@ -84,7 +87,7 @@ const Parent = () => {
               <li>developing your team to be more effective</li>
               <li>managing home/remote workers</li>
               <li>holding difficult conversations/managing conflict</li>
-              <li>managing your toxic boss</li>
+              <li>managing toxic workplace relationships</li>
               <li>building trust</li>
               <li>developing confidence</li>
               <li>becoming more assertive</li>
@@ -118,18 +121,20 @@ const Parent = () => {
             <p>
               With over 2 decades of leadership, people and organisational development experience, I
               use a wide range of tools and techniques to support you in your behaviour change and
-              development. I’ve coached people in various types and size of organisation, in the
-              public and private sector, and at all levels up to Managing Director. I’ve recruited
-              and managed two training teams, and reporting at Director level, been part of a senior
-              management team of a FTSE 100 company. I brings this experience to my coaching and
-              tailor my approach to your unique needs. I’ve witnessed the powerful difference that
-              my coaching has made to individuals and their businesses (see testimonials). I strive
-              to be the best coach I can be through personal development, self-reflection and
-              supervision.
+              development. I've coached people in various types and size of organisation, in the
+              public and private sector, and at all levels up to Managing Director. I've taught
+              leadership at masters level, recruited and managed two training teams, and reporting
+              at Director level, been part of a senior management team of a FTSE 100 company. I
+              brings this experience to my coaching and tailor my approach to your unique needs.
+              I've witnessed the powerful difference that my coaching has made to individuals and
+              their businesses (see testimonials). I strive to be the best coach I can be through
+              personal development, self-reflection and supervision.
             </p>
           </div>
         </div>
-        <div className="text-center">Click here to talk to me about achieving your potential</div>
+        <div className="text-center">
+          Click <ContactFormLink>here</ContactFormLink> to talk to me about achieving your potential
+        </div>
         <br />
         <br />
         <div className="rounded-box bg-neutral p-4 pb-2">
@@ -139,7 +144,7 @@ const Parent = () => {
 
           <ul className="list-disc rounded-box text-neutral-content">
             <li>Post-graduate level certificate in Performance Development Coaching</li>
-            <li>Leadership in Management</li>
+            <li>MSC in Leadership</li>
             <li>PRINT® and DiSC accredited</li>
             <li>Trained NLP practitioner, I use NLP techniques in coaching where appropriate</li>
             <li>Member of Coaching York and Associate Member of the CIPD.</li>
@@ -170,7 +175,9 @@ const Parent = () => {
               my coaching is accessible to everyone and charge a lower rate if you are self-funding
               or work for a charity.
             </p>
-            <p>Contact me for a no obligation discussion</p>
+            <p>
+              Contact me <ContactFormLink>here</ContactFormLink> for a no obligation discussion
+            </p>
           </div>
           <div
             style={{

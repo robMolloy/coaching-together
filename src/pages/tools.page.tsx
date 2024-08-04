@@ -1,5 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { Typography } from "@/components";
+import { ContactForm } from "@/components/ContactForm";
+import { ContactFormLink } from "@/components/ContactFormLink";
 
 const Parent = () => {
   return (
@@ -12,7 +14,10 @@ const Parent = () => {
           conversation that, done well, can bring about personal insight and sustained behaviour
           change. It's a bespoke, time effective way to develop.
         </p>
-        <p>I'd love to be part of your journey, contact me here to talk about how I can help</p>
+        <p>
+          I'd love to be part of your journey, contact me <ContactFormLink>here</ContactFormLink> to
+          talk about how I can help
+        </p>
         <br />
         <h2 className="mt-0">How to select a coach</h2>
         <p>
@@ -21,7 +26,9 @@ const Parent = () => {
           might work together, if we don't think the chemistry is there, I can suggest someone from
           my network who maybe more suitable to work with you.
         </p>
-        <p>Contact me here to arrange a chemistry session</p>
+        <p>
+          Contact me <ContactFormLink>here</ContactFormLink> to arrange a chemistry session
+        </p>
         <br />
         <div className="flex justify-center">
           <img src="/img/print_logo_small2.png" alt="" />
@@ -81,7 +88,9 @@ const Parent = () => {
             allowFullScreen={true}
           />
         </div>
-        <p>Contact me here to discuss PRINT® profiling</p>
+        <p>
+          Contact me <ContactFormLink>here</ContactFormLink> to discuss PRINT® profiling
+        </p>
         <div className="flex justify-center">
           <img src="/img/everything_disc.jpg" alt="" />
         </div>
@@ -98,9 +107,11 @@ const Parent = () => {
           <li>Management Profile</li>
           <li>Work of Leaders Profile</li>
           <li>Group Culture Report</li>
-          <li>Contact me here to talk about DiSC</li>
         </ul>
-        <p>Contact me here to talk about DiSC</p>
+        <p>
+          Contact me <ContactFormLink>here</ContactFormLink> to talk about DiSC
+        </p>
+        <ContactForm />
       </Typography>
     </main>
   );

@@ -101,7 +101,7 @@ export const ContactForm = () => {
   };
 
   return (
-    <form className="flex w-full flex-col gap-8">
+    <form className="flex w-full flex-col gap-8" id="contact-form">
       <h2 className="mb-0">Contact me</h2>
       <TextInput
         showError={!!formDataErrorMessages.name}

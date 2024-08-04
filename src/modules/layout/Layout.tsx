@@ -1,7 +1,6 @@
-import Link from "next/link";
-import { NavBar, NavBarDropdown } from "./NavBar";
-import { ThemeSelector } from "../themeSelector";
 import { Bars3Icon } from "@heroicons/react/24/outline";
+import Link from "next/link";
+import { NavBar } from "./NavBar";
 
 export type TPageLink = {
   label: string;
@@ -68,17 +67,6 @@ export const Layout = (p: { children: React.ReactNode }) => {
                     <Link href="/">Home</Link>
                     <Link href="/tools">Tools</Link>
                     <Link href="/contact">Contact</Link>
-                    <NavBarDropdown
-                      labelChildren={(p: { tabIndex: 0 }) => (
-                        <div className="link no-underline hover:underline" tabIndex={p.tabIndex}>
-                          <div>Theme &#x25BC;</div>
-                        </div>
-                      )}
-                    >
-                      <div className="overflow-y-auto p-4">
-                        <ThemeSelector />
-                      </div>
-                    </NavBarDropdown>
                   </div>
                 </>
               }

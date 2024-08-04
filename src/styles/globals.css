@@ -45,3 +45,6 @@ input[type=number] {
 .list-disc>li::marker {
   color: oklch(var(--bc));
 }
+html {
+  scroll-behavior: smooth;
+}
