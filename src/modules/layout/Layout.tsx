@@ -54,15 +54,17 @@ export const Layout = (p: { children: React.ReactNode }) => {
                 <div className="flex items-center gap-2 pl-4">
                   <div className="block sm:hidden">
                     <OpenDrawerWrapper>
-                      <Bars3Icon />
+                      <Bars3Icon style={{ width: "24px", height: "24px" }} />
                     </OpenDrawerWrapper>
                   </div>
-                  <Link href="/" className="p-0 text-3xl hover:underline"></Link>
+                  <Link href="/" className="p-0 text-3xl hover:underline">
+                    JPC
+                  </Link>
                 </div>
               }
               rightChildren={
                 <>
-                  <div className="flex w-full items-center justify-end gap-6">
+                  <div className="hidden w-full items-center justify-end gap-6 sm:flex">
                     <Link href="/">Home</Link>
                     <Link href="/tools">Tools</Link>
                     <Link href="/contact">Contact</Link>
@@ -89,7 +91,19 @@ export const Layout = (p: { children: React.ReactNode }) => {
           <CloseDrawerWrapper />
 
           <DrawerContainer>
-            <CloseDrawerWrapper>asd </CloseDrawerWrapper>
+            <CloseDrawerWrapper>
+              <ul className="menu menu-lg">
+                <li>
+                  <Link href="/">Home</Link>
+                </li>
+                <li>
+                  <Link href="/tools">Tools</Link>
+                </li>
+                <li>
+                  <Link href="/contact">Contact</Link>
+                </li>
+              </ul>
+            </CloseDrawerWrapper>
           </DrawerContainer>
         </div>
       </div>

@@ -5,7 +5,7 @@ import { DaisyHero } from "@/components/DaisyHero";
 const Parent = () => {
   return (
     <main className={`min-h-screen`}>
-      <DaisyHero backgroundImageUrl="/img/redwood.png" heading="Coaching Together">
+      <DaisyHero backgroundImageUrl="/img/redwood.png" heading="Janette Poole Coaching">
         Reach your potential
       </DaisyHero>
       <Typography fullPage>

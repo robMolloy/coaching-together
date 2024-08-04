@@ -8,7 +8,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Coaching Together</title>
+        <title>Janette Poole Coaching</title>
       </Head>
 
       <Notify />
